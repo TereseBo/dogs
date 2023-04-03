@@ -1,15 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//Style
+import './App.css'
+//Pages
+import Doglist from './pages/Doglist'
+import Dogdetails from './pages/Dogdetails'
 
-//Components
-import List from './components/List';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-   <List />
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Doglist />} />
+        <Route path="/dog/:dog" element={<Dogdetails />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
