@@ -1,28 +1,15 @@
-import { useState, useEffect } from 'react';
-
-import './List.css';
+//Style
+import './List.css'
 //Components
-import Item from './Item';
+import Item from './Item'
 
-export default function List(props) {
-    const [dogs, setDogs] = useState([]);
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('https://dog.ceo/api/breeds/list/all');
-            const data = await response.json();
-            const array = Object.keys(data.message);
-            setDogs(array);
-            console.log(array);
-        }
-        fetchData();
-
-    }, []);
-
+export default function List({ content }) {
+    
     return (
         <ul className="List">
-            {dogs.map((dog) => {
+            {content.map((item) => {
                 return (
-                    <li><Item title={dog} /></li>
+                    <li key={`${item}-li`}><Item key={`${item}-item`} title={item} /></li>
                 )
             })}
         </ul>
