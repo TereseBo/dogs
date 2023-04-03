@@ -1,9 +1,14 @@
-import './Item.css';
+import { Link } from "react-router-dom"
+//Style
+import './Item.css'
 
-export default function Item({title}) {
+export default function Item({ title }) {
+    
     return (
         <div className="Item">
-        <h2>{title}</h2>
+            <Link to={`/dog/${title}`}>
+                <h2>{title}</h2>
+            </Link>
         </div>
-    );
-    }
+    )
+}

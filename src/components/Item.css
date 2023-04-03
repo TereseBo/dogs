@@ -1,12 +1,14 @@
-.Item{
-    background-color: cornflowerblue;
-}
-.Item:hover{
-    background-color: rgb(118, 118, 186);
-    color: white;
-}
+
 .Item h2{
     font-size: 1.5rem;
     margin: 0;
     padding: 0.5rem;
+}
+.Item > a{
+    text-decoration: none;
+    color: inherit;
+}
+.Item:hover{
+    background-color: rgb(118, 118, 186);
+    color: white;
 }
