@@ -1,7 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 import Doglist from './pages/Doglist';
-//import { act } from "react-dom/test-utils";
 
 test('Initially renders loading message', () => {
   render(<App><Doglist /></App>);
@@ -36,7 +35,7 @@ test('Renders doglist on expected fetch-response', async () => {
   expect(lastItem).toBeInTheDocument();
 });
 
-test('Renders error message on unexpected fetch-response', async () => {
+test('Renders error message on wrong servercode', async () => {
   const fakeDoglist =
   {
     message: {
