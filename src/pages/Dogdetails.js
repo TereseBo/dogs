@@ -9,7 +9,7 @@ export default function Dogdetails() {
     const { dog } = useParams()
     const [images, setImages] = useState([])
     const [msg, setMsg] = useState('Loading...');
-
+   
     useEffect(() => {
         async function fetchData() {
             try {
@@ -23,7 +23,7 @@ export default function Dogdetails() {
         }
         fetchData()
     }, [dog])
-
+    
     return (
         <div className='Dogdetails'>
             {images.length>0 ? 
@@ -38,6 +38,5 @@ export default function Dogdetails() {
                 </div>
             </> : <Msgbox msg={msg} />}
         </div>
-
     )
 }

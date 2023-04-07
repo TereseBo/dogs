@@ -8,6 +8,7 @@ import Msgbox from '../components/Msgbox';
 export default function Doglist(){
     const [dogs, setDogs] = useState([]);
     const [msg, setMsg] = useState('Loading...');
+   
     useEffect(() => {
         async function fetchData() {
             try{
