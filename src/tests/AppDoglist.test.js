@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import App from './App';
-import Doglist from './pages/Doglist';
+import App from '../App';
+import Doglist from '../pages/Doglist';
 
 test('Initially renders loading message', () => {
   render(<App><Doglist /></App>);

@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import Dogdetails from './pages/Dogdetails';
+import Dogdetails from '../pages/Dogdetails';
 
 test('Initially renders loading message', () => {
   render(<Dogdetails />);
