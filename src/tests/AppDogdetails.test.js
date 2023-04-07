@@ -23,8 +23,8 @@ test('Renders images on expected fetch-response', async () => {
     })
   );
   render(<Dogdetails />);
-  const img = await waitFor(() => screen.getAllByRole('img'))
-  expect(img.length).toBe(3);
+  const images = await waitFor(() => screen.getAllByRole('img'))
+  expect(images.length).toBe(3);
 });
 
 test('Renders error message on unexpected fetch-response', async () => {
